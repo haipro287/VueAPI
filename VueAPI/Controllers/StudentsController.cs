@@ -113,7 +113,7 @@ namespace ContosoUniversity.Controllers
             {
                 await StudentsService.Delete(id);
 
-                return RedirectToAction(nameof(GetStudents));
+                return NoContent();
             }
             catch (DbUpdateException /* ex */)
             {
